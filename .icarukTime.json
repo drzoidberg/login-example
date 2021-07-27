@@ -1,16 +1,22 @@
 {
-    "idleHeartbeats": 754,
-    "navigatingHeartbeats": 631,
-    "totalCodingHeartbeats": 353,
+    "idleHeartbeats": 1512,
+    "navigatingHeartbeats": 856,
+    "totalCodingHeartbeats": 780,
     "languageHeartbeats": {
         "javascript": 267,
-        "html": 86
+        "html": 131,
+        "json": 103,
+        "scminput": 52,
+        "markdown": 227
     },
     "fileHeartbeats": {
         "store/user/index.js": 52,
         "src/store/user/index.js": 45,
         "src/store/actions.js": 97,
         "src/store/user/userLogout.action.js": 73,
-        "public/index.html": 86
+        "public/index.html": 131,
+        "package.json": 103,
+        "scm/git/scm0/input": 52,
+        "README.md": 227
     }
 }
