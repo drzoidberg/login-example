@@ -1,13 +1,14 @@
 {
-    "idleHeartbeats": 1512,
-    "navigatingHeartbeats": 856,
-    "totalCodingHeartbeats": 780,
+    "idleHeartbeats": 3632,
+    "navigatingHeartbeats": 1982,
+    "totalCodingHeartbeats": 4948,
     "languageHeartbeats": {
-        "javascript": 267,
+        "javascript": 2963,
         "html": 131,
         "json": 103,
         "scminput": 52,
-        "markdown": 227
+        "markdown": 315,
+        "scss": 1384
     },
     "fileHeartbeats": {
         "store/user/index.js": 52,
@@ -17,6 +18,12 @@
         "public/index.html": 131,
         "package.json": 103,
         "scm/git/scm0/input": 52,
-        "README.md": 227
+        "README.md": 315,
+        "src/sass/main.scss": 341,
+        "src/index.js": 1210,
+        "src/components/Login/Login.js": 1204,
+        "src/components/WaitDelay/WaitDelay.js": 282,
+        "src/sass/base/_base.scss": 302,
+        "src/components/Login/Login.module.scss": 741
     }
 }
