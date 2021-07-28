@@ -1,14 +1,15 @@
 {
-    "idleHeartbeats": 9256,
-    "navigatingHeartbeats": 3652,
-    "totalCodingHeartbeats": 13774,
+    "idleHeartbeats": 9761,
+    "navigatingHeartbeats": 3890,
+    "totalCodingHeartbeats": 13999,
     "languageHeartbeats": {
-        "javascript": 9943,
+        "javascript": 10114,
         "html": 219,
         "json": 169,
         "scminput": 226,
         "markdown": 315,
-        "scss": 2902
+        "scss": 2902,
+        "plaintext": 54
     },
     "fileHeartbeats": {
         "store/user/index.js": 52,
@@ -21,7 +22,7 @@
         "README.md": 315,
         "src/sass/main.scss": 341,
         "src/index.js": 2369,
-        "src/components/Login/Login.js": 6919,
+        "src/components/Login/Login.js": 7090,
         "src/components/WaitDelay/WaitDelay.js": 282,
         "src/sass/base/_base.scss": 434,
         "src/components/Login/Login.module.scss": 1457,
@@ -30,6 +31,7 @@
         "src/sass/abstracts/_variables.scss": 45,
         "src/components/App/App.module.scss": 46,
         "src/sass/overrides.scss": 442,
-        "src/sass/_variables.scss": 137
+        "src/sass/_variables.scss": 137,
+        "/tmp/mine-cached/login-examples/src/components/Login/Login.js.git": 54
     }
 }

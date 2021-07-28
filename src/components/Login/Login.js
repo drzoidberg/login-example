@@ -96,6 +96,8 @@ export default function Login(props) {
                             type='text'
                             size='lg'
                             placeholder='Usuario'
+                            onChange={handleChange}
+                            value={firstName}
                           ></Form.Control>
                         </Form.Group>
                         <Form.Group>
