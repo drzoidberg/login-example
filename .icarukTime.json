@@ -1,14 +1,14 @@
 {
-    "idleHeartbeats": 7744,
-    "navigatingHeartbeats": 3443,
-    "totalCodingHeartbeats": 10529,
+    "idleHeartbeats": 9256,
+    "navigatingHeartbeats": 3652,
+    "totalCodingHeartbeats": 13774,
     "languageHeartbeats": {
-        "javascript": 7379,
+        "javascript": 9943,
         "html": 219,
         "json": 169,
         "scminput": 226,
         "markdown": 315,
-        "scss": 2221
+        "scss": 2902
     },
     "fileHeartbeats": {
         "store/user/index.js": 52,
@@ -21,14 +21,15 @@
         "README.md": 315,
         "src/sass/main.scss": 341,
         "src/index.js": 2369,
-        "src/components/Login/Login.js": 4355,
+        "src/components/Login/Login.js": 6919,
         "src/components/WaitDelay/WaitDelay.js": 282,
         "src/sass/base/_base.scss": 434,
-        "src/components/Login/Login.module.scss": 966,
+        "src/components/Login/Login.module.scss": 1457,
         "src/components/App/App.js": 58,
         "src/components/Loading/Loading.js": 48,
         "src/sass/abstracts/_variables.scss": 45,
         "src/components/App/App.module.scss": 46,
-        "src/sass/overrides.scss": 389
+        "src/sass/overrides.scss": 442,
+        "src/sass/_variables.scss": 137
     }
 }

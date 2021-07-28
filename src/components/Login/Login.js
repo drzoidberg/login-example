@@ -8,71 +8,42 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 
-import Collapse from 'react-bootstrap/Collapse'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faTag } from '@fortawesome/free-solid-svg-icons'
 
-import homeImg from '../../assets/bg-ordenator.jpg'
 import inubaLogo from '../../assets/inuba-logo.png'
 
-// import classes from './Login.module.scss'
+import classes from './Login.module.scss'
 
 export default function Login(props) {
   return (
     <>
-      <style>
-        {`
-                #home-section {
-                    background: url(${homeImg});
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-attachment: fixed;
-                    min-height: 700px;
-                }
-
-                #home-section .dark-overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    min-height: 700px;
-                    background: rgba(255,255,255, 0.3);
-                }
-
-                #home-section .home-inner {
-                    padding-top: 150px;
-                }
-
-                #home-section .check-icon {
-                    color: white;
-                    background: #555;
-                    padding: 5px;
-                    border-radius: 50%;
-                }
-
-                #home-section .card-translucid {
-                    background-color: rgba(0,123,255, 0.8)!important;
-                }
-
-
-            `}
-      </style>
-
-      <header id='home-section'>
-        <div className='dark-overlay'>
-          <div className='home-inner'>
+      <header className={classes['home-section']}>
+        <div className={classes['dark-overlay']}>
+          <div className={classes['home-inner']}>
             <Container>
               <Row>
                 <Col lg='6' className='d-none d-lg-block text-white'>
                   <h1 className='display-4 text-center'>
-                    <strong>Prueba gratis</strong>
+                    <strong className='fw-bold'>Prueba gratis</strong>
                   </h1>
+                  <div className='text-center mt-2 mb-4'>
+                    <h5 className='p-4 align-self-end login-tagline'>
+                      Look, just because I don't be givin' no man a foot massage
+                      don't make it right for Marsellus to throw Antwone into a
+                      glass motherfuckin' house...
+                    </h5>
+                    <FontAwesomeIcon
+                      icon={faTag}
+                      className={`fa-4x ${classes['tag-icon']}`}
+                    />
+                  </div>
                   <div className='d-flex'>
                     <div className='p-4 align-self-start'>
                       <FontAwesomeIcon
                         icon={faCheck}
-                        className='fa-2x check-icon'
+                        className={`fa-2x ${classes['check-icon']}`}
                       />
                     </div>
                     <div className='p-4 align-self-end'>
@@ -85,7 +56,7 @@ export default function Login(props) {
                     <div className='p-4 align-self-start'>
                       <FontAwesomeIcon
                         icon={faCheck}
-                        className='fa-2x check-icon'
+                        className={`fa-2x ${classes['check-icon']}`}
                       />
                     </div>
                     <div className='p-4 align-self-end'>
@@ -98,7 +69,7 @@ export default function Login(props) {
                     <div className='p-4 align-self-start'>
                       <FontAwesomeIcon
                         icon={faCheck}
-                        className='fa-2x check-icon'
+                        className={`fa-2x ${classes['check-icon']}`}
                       />
                     </div>
                     <div className='p-4 align-self-end'>
@@ -112,11 +83,13 @@ export default function Login(props) {
                   <Card className='bg-white p-3'>
                     <Card.Body>
                       <Row>
-                        <Col lg='4'>
+                        <Col lg='4' md='4' xs='4'>
                           <Image src={inubaLogo} fluid />
                         </Col>
                       </Row>
-                      <h3 className='mt-5'>Iniciar sesión</h3>
+                      <h4 className='mt-5 mb-4 fw-bold text-secondary'>
+                        Iniciar sesión
+                      </h4>
                       <Form>
                         <Form.Group>
                           <Form.Control
@@ -130,14 +103,22 @@ export default function Login(props) {
                             type='password'
                             size='lg'
                             placeholder='Contraseña'
+                            className='mb-1'
                           ></Form.Control>
                         </Form.Group>
+                        <Form.Group>
+                          <a
+                            href='#'
+                            class='text-secondary text-decoration-none fs-6'
+                          >
+                            Has olvidado tu contraseña?
+                          </a>
+                        </Form.Group>
                         <Button
-                          // variant='outline-light'
                           block
                           type='submit'
                           value='Submit'
-                          className='float-end'
+                          className='text-uppercase float-end fw-bold mt-4 px-5 py-2'
                           primary
                         >
                           Iniciar sesión
