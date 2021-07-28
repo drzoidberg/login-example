@@ -27,22 +27,24 @@ function Form() {
   }
 
   return (
+    // logo grandote
+    // separar inputs texto & password de submit
+    // poner dos bloques, separando mitades de pantalla
     <div className={classes['form']}>
+      <div className='container'></div>
       <form action=''>
         <div className={classes['form-content']}>
           <input
             type='text'
             className={classes['text-input']}
-            label='User'
-            placeholder='Your name'
+            placeholder='Usuario'
             value={userTextInput}
             onChange={handleUserTextInput}
           />
           <input
             className={classes['text-input']}
             type='password'
-            label='Password'
-            placeholder='Your password'
+            placeholder='Contraseña'
             value={passwordInput}
             onChange={handlePasswordInput}
           />

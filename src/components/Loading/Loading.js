@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import classes from './Loading.module.scss'
 
 // TODO: print when user & passwd aren' t correct:
-// suggest { user: 'root', password: 'root' }
+// currently set to { user: 'root', password: 'root' }
 export default function Loading({ text, speed, className }) {
   const [content, setContent] = React.useState(text)
 

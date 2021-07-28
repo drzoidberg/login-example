@@ -1,29 +1,33 @@
 {
-    "idleHeartbeats": 3632,
-    "navigatingHeartbeats": 1982,
-    "totalCodingHeartbeats": 4948,
+    "idleHeartbeats": 4652,
+    "navigatingHeartbeats": 2383,
+    "totalCodingHeartbeats": 5862,
     "languageHeartbeats": {
-        "javascript": 2963,
-        "html": 131,
+        "javascript": 3316,
+        "html": 219,
         "json": 103,
-        "scminput": 52,
+        "scminput": 178,
         "markdown": 315,
-        "scss": 1384
+        "scss": 1731
     },
     "fileHeartbeats": {
         "store/user/index.js": 52,
         "src/store/user/index.js": 45,
         "src/store/actions.js": 97,
         "src/store/user/userLogout.action.js": 73,
-        "public/index.html": 131,
+        "public/index.html": 219,
         "package.json": 103,
-        "scm/git/scm0/input": 52,
+        "scm/git/scm0/input": 178,
         "README.md": 315,
         "src/sass/main.scss": 341,
         "src/index.js": 1210,
-        "src/components/Login/Login.js": 1204,
+        "src/components/Login/Login.js": 1451,
         "src/components/WaitDelay/WaitDelay.js": 282,
-        "src/sass/base/_base.scss": 302,
-        "src/components/Login/Login.module.scss": 741
+        "src/sass/base/_base.scss": 434,
+        "src/components/Login/Login.module.scss": 865,
+        "src/components/App/App.js": 58,
+        "src/components/Loading/Loading.js": 48,
+        "src/sass/abstracts/_variables.scss": 45,
+        "src/components/App/App.module.scss": 46
     }
 }
