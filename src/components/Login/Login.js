@@ -1,88 +1,156 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import _ from 'lodash'
-import { Redirect } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+// import React from 'react';
+import React, { useState } from 'react'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Card from 'react-bootstrap/Card'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
 
-import classes from './Login.module.scss'
+import Collapse from 'react-bootstrap/Collapse'
 
-import { userLogin } from '../../store/actions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
-function Form() {
-  const [userTextInput, setUserTextInput] = React.useState('')
-  const [passwordInput, setPasswordInput] = React.useState('')
-  const dispatch = useDispatch()
+import homeImg from '../../assets/bg-ordenator.jpg'
+import inubaLogo from '../../assets/inuba-logo.png'
 
-  function handleUserTextInput(e) {
-    return setUserTextInput(e.target.value)
-  }
+// import classes from './Login.module.scss'
 
-  function handlePasswordInput(e) {
-    return setPasswordInput(e.target.value)
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    dispatch(userLogin({ name: userTextInput, password: passwordInput }))
-  }
-
-  return (
-    // logo grandote
-    // separar inputs texto & password de submit
-    // poner dos bloques, separando mitades de pantalla
-    <div className={classes['form']}>
-      <div className='container'></div>
-      <form action=''>
-        <div className={classes['form-content']}>
-          <input
-            type='text'
-            className={classes['text-input']}
-            placeholder='Usuario'
-            value={userTextInput}
-            onChange={handleUserTextInput}
-          />
-          <input
-            className={classes['text-input']}
-            type='password'
-            placeholder='Contraseña'
-            value={passwordInput}
-            onChange={handlePasswordInput}
-          />
-          <input
-            type='submit'
-            className={classes['button']}
-            onClick={handleSubmit}
-            value='Submit'
-          />
-        </div>
-      </form>
-    </div>
-  )
-}
-
-function FormValidate({ userData }) {
-  switch (userData) {
-    case 'logged in':
-      return <Redirect to='/home' />
-    case 'logged out':
-      return <Form />
-    default:
-      return <Form />
-  }
-}
-FormValidate.propTypes = PropTypes.string.isRequired
-
-export default function Login() {
-  const userData = useSelector(state => state.user)
-
+export default function Login(props) {
   return (
     <>
-      <div className={classes['container']}>
-        <p className='u-no-margins u-center-text'>
-          Welcome to <br /> iNuba (v0.1)
-        </p>
-        <FormValidate userData={userData} />
-      </div>
+      <style>
+        {`
+                #home-section {
+                    background: url(${homeImg});
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-attachment: fixed;
+                    min-height: 700px;
+                }
+
+                #home-section .dark-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    min-height: 700px;
+                    background: rgba(255,255,255, 0.3);
+                }
+
+                #home-section .home-inner {
+                    padding-top: 150px;
+                }
+
+                #home-section .check-icon {
+                    color: white;
+                    background: #555;
+                    padding: 5px;
+                    border-radius: 50%;
+                }
+
+                #home-section .card-translucid {
+                    background-color: rgba(0,123,255, 0.8)!important;
+                }
+
+
+            `}
+      </style>
+
+      <header id='home-section'>
+        <div className='dark-overlay'>
+          <div className='home-inner'>
+            <Container>
+              <Row>
+                <Col lg='6' className='d-none d-lg-block text-white'>
+                  <h1 className='display-4 text-center'>
+                    <strong>Prueba gratis</strong>
+                  </h1>
+                  <div className='d-flex'>
+                    <div className='p-4 align-self-start'>
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className='fa-2x check-icon'
+                      />
+                    </div>
+                    <div className='p-4 align-self-end'>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium doloremque excepturi commodi corporis non
+                      asperiores!
+                    </div>
+                  </div>
+                  <div className='d-flex'>
+                    <div className='p-4 align-self-start'>
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className='fa-2x check-icon'
+                      />
+                    </div>
+                    <div className='p-4 align-self-end'>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium doloremque excepturi commodi corporis non
+                      asperiores!
+                    </div>
+                  </div>
+                  <div className='d-flex'>
+                    <div className='p-4 align-self-start'>
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className='fa-2x check-icon'
+                      />
+                    </div>
+                    <div className='p-4 align-self-end'>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium doloremque excepturi commodi corporis non
+                      asperiores!
+                    </div>
+                  </div>
+                </Col>
+                <Col lg='6'>
+                  <Card className='bg-white p-3'>
+                    <Card.Body>
+                      <Row>
+                        <Col lg='4'>
+                          <Image src={inubaLogo} fluid />
+                        </Col>
+                      </Row>
+                      <h3 className='mt-5'>Iniciar sesión</h3>
+                      <Form>
+                        <Form.Group>
+                          <Form.Control
+                            type='text'
+                            size='lg'
+                            placeholder='Usuario'
+                          ></Form.Control>
+                        </Form.Group>
+                        <Form.Group>
+                          <Form.Control
+                            type='password'
+                            size='lg'
+                            placeholder='Contraseña'
+                          ></Form.Control>
+                        </Form.Group>
+                        <Button
+                          // variant='outline-light'
+                          block
+                          type='submit'
+                          value='Submit'
+                          className='float-end'
+                          primary
+                        >
+                          Iniciar sesión
+                        </Button>
+                      </Form>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        </div>
+      </header>
     </>
   )
 }
